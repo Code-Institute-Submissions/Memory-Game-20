@@ -1,0 +1,238 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Varela+Round&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: radial-gradient( #006ca4, #002c49);
+    background-repeat: no-repeat;
+    font-family: 'Permanent Marker', cursive;
+    //color: #9D5900;
+    color: white;
+    padding: 1% 0 5% 0;
+}
+
+.home {
+    position: absolute;
+    top: 1%;
+    right: 10%;
+    padding: 0.3em;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    border: solid 5px rgb(255,255,255);
+    box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
+    text-align: center;
+    font-size: 2rem;
+    cursor: pointer;
+
+    a {
+        color: white !important;
+        text-decoration: none;
+    }
+
+}
+
+.page-title {
+    letter-spacing: 0.5rem;
+}
+
+.score-panel {
+    font-size: 1.5rem;
+    width: 60%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.rating-block {
+    float: center;
+}
+
+.stars {
+    display: inline-block;
+}
+
+.stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.restart {
+    color: #ffffff;
+	float: center;
+	cursor: pointer;
+}
+
+.cards-block {
+    background-color: rgba(255,255,255, 0.5);
+    border-radius: 6px;
+    width: 60%;
+    margin: 0 auto;
+    padding: 1rem;
+    box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 1rem;
+    justify-content: center;
+    perspective: 500px;
+    position: relative;
+}
+
+.card {
+    height: 10rem;
+    width: 8rem;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
+}
+
+.card:active {
+    transform:scale(.97);
+    transition: transform .2s;
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    backface-visibility: hidden;
+    border-width: 1px;
+    border-style: solid;
+    transition: transform 500ms ease-in-out;
+}
+
+.card-front {
+    background-color: white;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    border: solid 5px rgb(4, 59, 101);
+    transform: rotateY(180deg);
+}
+
+.card-back {
+    color: rgb(4, 59, 101);
+    font-size: 2rem;
+    background-color: white;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    border: solid 5px rgb(4, 59, 101);
+}
+
+.card.open .card-back {
+    transform: rotateY(-180deg);
+}
+  
+.card.open .card-front {
+    transform: rotateY(0);
+}
+
+.card-value {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: transform 100ms ease-in-out;
+    transform: scale(.9);
+}
+
+.card.match .card-front{
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+}
+
+
+.card.disabled {
+	pointer-events: none;
+    transform: none !important;
+}
+
+/*
+ * Styles for congratulations modal
+ */
+
+
+ .overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.overlay:target {
+	visibility: visible;
+	opacity: 1;
+}
+  
+.popup {
+	margin: 70px auto;
+	padding: 20px;
+	background: #ffffff;
+	border-radius: 5px;
+	width: 85%;
+	position: relative;
+	transition: all 5s ease-in-out;
+	font-family: 'Gloria Hallelujah', cursive;
+}
+  
+.popup h2 {
+	margin-top: 0;
+	color: #333;
+	font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+}
+
+.popup .close:hover {
+	color: #E5F720;
+}
+
+.popup .content-1,
+.content-2 {
+	max-height: 30%;
+	overflow: auto;
+	text-align: center;
+}
+
+.show {
+	visibility: visible !important;
+	opacity: 100 !important;
+}
+
+#starRating li {
+	display: inline-block;
+}
+
+#play-again {
+	background-color: #141214;
+	padding: 0.7rem 1rem;
+	font-size: 1.1rem;
+	display: block;
+	margin: 0 auto;
+	width: 50%;
+	font-family: 'Gloria Hallelujah', cursive;
+	color: #ffffff;
+	border-radius: 5px;
+}

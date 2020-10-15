@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"/>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/cards.css">
+    <title>Game</title>
+</head>
+<body>
+    <section>
+        <div class="container-fluid">
+            <div class="home"><a href="index.html"><i class="fas fa-home"></i></a></div>
+            <div class="section-heading text-center my-5 text-uppercase">
+                <h1 class="page-title">Memory Game</h1>
+            </div>
+            <div class="row score-panel">
+                <div class="col rating-block text-center">
+                    <ul class="stars">
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                    </ul>
+                </div>
+                <div class="col moves-block"><span class="moves">0</span> Flips</div>
+                <div class="col timer">
+                </div>
+                <div class="col restart" onclick="startGame()">
+                    <i class="fas fa-redo"></i>
+                </div>
+            </div>
+            <div class="cards-block rellax" data-rellax-speed="-6" id="deck-block">
+                <div class="card rellax" data-rellax-speed="-5" data-peak="aconcagua">
+                    <div class="card-back card-face">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div class="card-front card-face">
+                        <img class="card-value" src="assets/img/cards/Aconcagua2016.jpg">
+                    </div>
+                </div>
+                <div class="card rellax" data-rellax-speed="-5" data-peak="aconcagua">
+                    <div class="card-back card-face"> 
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div class="card-front card-face">
+                        <img class="card-value" src="assets/img/cards/Aconcagua2016.jpg">
+                    </div>
+                </div>
+                <div class="card rellax" data-rellax-speed="-5" data-peak="everest">
+                    <div class="card-back card-face">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div class="card-front card-face">
+                        <img class="card-value" src="assets/img/cards/Everest_kalapatthar.jpg">
+                    </div>
+                </div>
+                <div class="card rellax" data-rellax-speed="-5" data-peak="everest">
+                    <div class="card-back card-face">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div class="card-front card-face">
+                        <img class="card-value" src="assets/img/cards/Everest_kalapatthar.jpg">
+                    </div>
+                </div>
+                <div class="card rellax" data-rellax-speed="-5" data-peak="elbrus">
+                    <div class="card-back card-face">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div class="card-front card-face">
+                        <img class="card-value" src="assets/img/cards/Mount_Elbrus_May_2008.jpg">
+                    </div>
+                </div>
+                <div class="card rellax" data-rellax-speed="-5" data-peak="elbrus">
+                    <div class="card-back card-face">
+                        <i class="fas fa-mountain"></i> 
+                    </div>
+                    <div class="card-front card-face">
+                        <img class="card-value" src="assets/img/cards/Mount_Elbrus_May_2008.jpg">
+                    </div>
+                </div>
+                <div class="card rellax" data-rellax-speed="-5" data-peak="kilimanjaro">
+                    <div class="card-back card-face">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div class="card-front card-face">
+                        <img class="card-value" src="assets/img/cards/Mount_Kilimanjaro.jpg">
+                    </div>
+                </div>
+                <div class="card rellax" data-rellax-speed="-5" data-peak="kilimanjaro">
+                    <div class="card-back card-face">
+                        <i class="fas fa-mountain"></i> 
+                    </div>
+                    <div class="card-front card-face">
+                        <img class="card-value" src="assets/img/cards/Mount_Kilimanjaro.jpg">
+                    </div>
+                </div>
+                <div class="card rellax" data-rellax-speed="-5" data-peak="kosciuszko">
+                    <div class="card-back card-face">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div class="card-front card-face">
+                        <img class="card-value" src="assets/img/cards/Mount_Kosciuszko.jpg">
+                    </div>
+                </div>
+                <div class="card rellax" data-rellax-speed="-5" data-peak="kosciuszko">
+                    <div class="card-back card-face">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div class="card-front card-face">
+                        <img class="card-value" src="assets/img/cards/Mount_Kosciuszko.jpg">
+                    </div>
+                </div>
+                <div class="card rellax" data-rellax-speed="-5" data-peak="puncakjaya">
+                    <div class="card-back card-face">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div class="card-front card-face">
+                        <img class="card-value" src="assets/img/cards/Puncakjaya.jpg">
+                    </div>
+                </div>
+                <div class="card rellax" data-rellax-speed="-5" data-peak="puncakjaya">
+                    <div class="card-back card-face">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div class="card-front card-face">
+                        <img class="card-value" src="assets/img/cards/Puncakjaya.jpg">
+                    </div>
+                </div>
+                <div class="card rellax" data-rellax-speed="-5" data-peak="vinson">
+                    <div class="card-back card-face">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div class="card-front card-face">
+                        <img class="card-value" src="assets/img/cards/Vinson_Massif.jpg">
+                    </div>
+                </div>
+                <div class="card rellax" data-rellax-speed="-5" data-peak="vinson">
+                    <div class="card-back card-face">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div class="card-front card-face">
+                        <img class="card-value" src="assets/img/cards/Vinson_Massif.jpg">
+                    </div>
+                 </div>
+                <div class="card rellax" data-rellax-speed="-5" data-peak="denali">
+                    <div class="card-back card-face">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div class="card-front card-face">
+                        <img class="card-value" src="assets/img/cards/Wonder_Lake_and_Denali.jpg">
+                    </div>
+                </div>
+                <div class="card rellax" data-rellax-speed="-5" data-peak="denali">
+                    <div class="card-back card-face">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div class="card-front card-face">
+                        <img class="card-value" src="assets/img/cards/Wonder_Lake_and_Denali.jpg">
+                    </div>
+                </div>
+            </div>
+            <div id="popup1" class="overlay">
+                <div class="popup">
+                    <h2>Congratulations 🎉</h2>
+                    <a class="close" href=# >×</a>
+                    <div class="content-1">
+                        Congratulations you're a winner 🎉🎉
+                    </div>
+                    <div class="content-2">
+                        <p>You made <span id=finalMove> </span> moves </p>
+                        <p>in <span id=totalTime> </span> </p>
+                        <p>Rating:  <span id=starRating></span></p>
+                    </div>
+                    <button id="play-again"onclick="playAgain()">
+                        Play again 😄</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+     <!-- RELLAX JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+     <!-- GAME JS -->
+     <script src="assets/js/game.js" async></script>
+</body>
+</html>
