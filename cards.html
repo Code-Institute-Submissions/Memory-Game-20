@@ -195,11 +195,22 @@
                         <p>Rating:  <span id=starRating></span></p>
                     </div>
                     <button id="play-again"onclick="playAgain()">
-                        Play next level</a>
+                        <a>Play next level</a>
                     </button>
                 </div>
             </div>
             <!-- #WIN GAME MODAL -->
+            <!-- TIMEOUT MODAL -->
+            <div id="popup-timeout" class="overlay-timeout">
+                <div class="timeout-modal" data-aos="fade-down">
+                    <h2>GAME OVER</h2>
+                    <p>Level 1:  60 seconds have passed</p>
+                    <button id="play-again2"onclick="playAgain()">
+                        Play Again</a>
+                    </button>
+                </div>
+            </div>
+            <!-- #TIMEOUT MODAL -->
         </div>
     </section>
      <!-- jQuery first, then Popper.js, then Bootstrap JS -->

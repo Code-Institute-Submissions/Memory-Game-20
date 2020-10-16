@@ -27,8 +27,6 @@ let modal = document.getElementById("popup-win");
  // array for opened cards
 var openedCards = [];
 
-var firstOverlay = document.getElementById("popup-name");
-
 var countWin = 0;
 
 
