@@ -113,6 +113,7 @@ var displayCard = function (){
 
 // @description add opened cards to OpenedCards list and check if cards are match or not
 function cardOpen() {
+    this.classList.add("disabled");
     openedCards.push(this);
     var len = openedCards.length;
     console.log("after the push: " + len)
@@ -160,11 +161,11 @@ function unmatched(){
     setTimeout(function(){
         openedCards[0].classList.remove("open");
         openedCards[1].classList.remove("open");
-        console.log(openedCards[0].classList)
-        console.log(openedCards[1].classList)
+        console.log(openedCards[0].classList);
+        console.log(openedCards[1].classList);
         enable();
-        console.log(openedCards[0].classList)
-        console.log(openedCards[1].classList)
+        console.log(openedCards[0].classList);
+        console.log(openedCards[1].classList);
         openedCards = [];
     },1100);
 }
@@ -241,26 +242,27 @@ function startTimer(){
 function lostGame(){
     console.log("lostGame checker")
     if(countWin == 0){
-        setTimeout( function doSomething(){
+        setTimeout( function(){
             if(matchedCard.length !== 16){
-                alert("60 seconds passed");
+                prompt("60 seconds passed");
+                console.log("60 seconds passed");
                 startGame();
             } else {
                 return
             }
         }, 60000);
     } else if(countWin == 1){
-        setTimeout( function doSomething(){
+        setTimeout( function(){
             if(matchedCard.length !== 16){
-                alert("50 seconds passed");
+                prompt("50 seconds passed");
             } else {
                 return
             }
         }, 50000);
     } else {
-        setTimeout( function doSomething(){
+        setTimeout( function(){
             if(matchedCard.length !== 16){
-                alert("45 seconds passed");
+                prompt("45 seconds passed");
             } else {
                 return
             }
@@ -272,7 +274,7 @@ function lostGame(){
 function congratulations(){
     if (matchedCard.length == 16){
         countWin++
-        clearTimeout(lostGame);
+        //clearTimeout(lostGame);
         clearInterval(interval);
         finalTime = timer.innerHTML;
 
@@ -306,7 +308,7 @@ function closeModal(){
 // @desciption for user to play Again 
 function playAgain(){
     modal.classList.remove("show");
-    clearTimeout(lostGame);
+    //clearTimeout(lostGame);
     startGame();
 }
 
