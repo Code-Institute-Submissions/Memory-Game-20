@@ -25,6 +25,7 @@ body {
   text-align: center;
   font-size: 2rem;
   cursor: pointer;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
 }
 
 .home a {
@@ -34,6 +35,7 @@ body {
 
 .page-title {
   letter-spacing: 0.5rem;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
 }
 
 .score-panel {
@@ -42,8 +44,8 @@ body {
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (auto)[4];
-      grid-template-columns: repeat(4, auto);
+  -ms-grid-columns: (auto)[5];
+      grid-template-columns: repeat(5, auto);
   grid-gap: 10px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -187,10 +189,62 @@ body {
           transform: none !important;
 }
 
-/*
- * Styles for congratulations modal
- */
-.overlay {
+/*==== Player Name Modal ===*/
+.overlay-name {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+  opacity: 0;
+}
+
+.name-input {
+  margin: 13rem auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 5px;
+  width: 85%;
+  position: relative;
+  -webkit-transition: all 5s ease-in-out;
+  transition: all 5s ease-in-out;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.3rem;
+  text-align: center;
+  color: black;
+}
+
+.name-input input {
+  padding: 0.5rem 1rem;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  border: solid 5px #043b65;
+  -webkit-box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
+          box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
+}
+
+.name-input input:focus {
+  outline: none;
+}
+
+.name-input button {
+  padding: 0.5rem 1rem;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  border: solid 5px #043b65;
+  -webkit-box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
+          box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
+}
+
+.overlay-name.visible {
+  visibility: visible;
+  opacity: 100 !important;
+}
+
+/* ==== Styles for congratulations modal ===*/
+.overlay-congrats {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -203,7 +257,7 @@ body {
   opacity: 0;
 }
 
-.overlay:target {
+.overlay-congrats:target {
   visibility: visible;
   opacity: 1;
 }
