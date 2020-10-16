@@ -200,6 +200,7 @@ body {
   background: rgba(0, 0, 0, 0.7);
   -webkit-transition: opacity 500ms;
   transition: opacity 500ms;
+  visibility: hidden;
   opacity: 0;
 }
 

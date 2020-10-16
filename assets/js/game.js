@@ -22,10 +22,14 @@ let starsList = document.querySelectorAll(".stars li");
 let closeicon = document.querySelector(".close");
 
  // declare modal
-let modal = document.getElementById("popup1");
+let modal = document.getElementById("popup-win");
 
  // array for opened cards
 var openedCards = [];
+
+var firstOverlay = document.getElementById("popup-name");
+
+var countWin = 0;
 
 
 // @description shuffles cards
@@ -45,6 +49,17 @@ function shuffle(array) {
     return array;
 };
 
+function username(){
+    var pname = document.getElementById("pname").value;
+    if (pname == ""){
+        alert("Name must be filled out");
+        return false;
+    } else {
+        document.getElementById("player-name").innerHTML = pname;
+        firstOverlay.classList.remove('visible');
+    }
+}
+
 
 // @description shuffles cards when page is refreshed / loads
 document.body.onload = startGame();
@@ -52,7 +67,11 @@ document.body.onload = startGame();
 
 // @description function to start a new play 
 function startGame(){
- 
+    console.log(countWin);
+    if(countWin==3){
+        countWin == 0;
+    }
+    console.log("after cleanup " + countWin);
     // empty the openCards array
     openedCards = [];
 
@@ -79,7 +98,7 @@ function startGame(){
     minute = 0; 
     hour = 0;
     var timer = document.querySelector(".timer");
-    timer.innerHTML = "0 mins 0 secs";
+    timer.innerHTML = "0  secs";
     clearInterval(interval);
 }
 
@@ -180,6 +199,7 @@ function moveCounter(){
         minute = 0; 
         hour = 0;
         startTimer();
+        card.addEventListener("click", lostGame);
     }
     // setting rates based on moves
     if (moves > 8 && moves < 12){
@@ -205,7 +225,7 @@ var timer = document.querySelector(".timer");
 var interval;
 function startTimer(){
     interval = setInterval(function(){
-        timer.innerHTML = minute+"mins "+second+"secs";
+        timer.innerHTML = second+"secs";
         second++;
         if(second == 60){
             minute++;
@@ -218,10 +238,41 @@ function startTimer(){
     },1000);
 }
 
+function lostGame(){
+    console.log("lostGame checker")
+    if(countWin == 0){
+        setTimeout( function doSomething(){
+            if(matchedCard.length !== 16){
+                alert("60 seconds passed");
+                startGame();
+            } else {
+                return
+            }
+        }, 60000);
+    } else if(countWin == 1){
+        setTimeout( function doSomething(){
+            if(matchedCard.length !== 16){
+                alert("50 seconds passed");
+            } else {
+                return
+            }
+        }, 50000);
+    } else {
+        setTimeout( function doSomething(){
+            if(matchedCard.length !== 16){
+                alert("45 seconds passed");
+            } else {
+                return
+            }
+        }, 45000);
+    }
+}
 
 // @description congratulations when all cards match, show modal and moves, time and rating
 function congratulations(){
     if (matchedCard.length == 16){
+        countWin++
+        clearTimeout(lostGame);
         clearInterval(interval);
         finalTime = timer.innerHTML;
 
@@ -232,6 +283,7 @@ function congratulations(){
         var starRating = document.querySelector(".stars").innerHTML;
 
         //showing move, rating, time on modal
+        document.getElementById("gamer").innerHTML = document.getElementById("pname").value;
         document.getElementById("finalMove").innerHTML = moves;
         document.getElementById("starRating").innerHTML = starRating;
         document.getElementById("totalTime").innerHTML = finalTime;
@@ -254,6 +306,7 @@ function closeModal(){
 // @desciption for user to play Again 
 function playAgain(){
     modal.classList.remove("show");
+    clearTimeout(lostGame);
     startGame();
 }
 
@@ -265,3 +318,4 @@ for (var i = 0; i < cards.length; i++){
     card.addEventListener("click", cardOpen);
     card.addEventListener("click", congratulations);
 };
+
