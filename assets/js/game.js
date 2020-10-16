@@ -244,7 +244,7 @@ function lostGame(){
     if(countWin == 0){
         setTimeout( function(){
             if(matchedCard.length !== 16){
-                prompt("60 seconds passed");
+                alert("60 seconds passed");
                 console.log("60 seconds passed");
                 startGame();
             } else {
@@ -254,7 +254,7 @@ function lostGame(){
     } else if(countWin == 1){
         setTimeout( function(){
             if(matchedCard.length !== 16){
-                prompt("50 seconds passed");
+                alert("50 seconds passed");
             } else {
                 return
             }
@@ -262,7 +262,7 @@ function lostGame(){
     } else {
         setTimeout( function(){
             if(matchedCard.length !== 16){
-                prompt("45 seconds passed");
+                alert("45 seconds passed");
             } else {
                 return
             }
@@ -274,7 +274,7 @@ function lostGame(){
 function congratulations(){
     if (matchedCard.length == 16){
         countWin++
-        //clearTimeout(lostGame);
+        clearTimeout(lostGame);
         clearInterval(interval);
         finalTime = timer.innerHTML;
 
@@ -308,7 +308,6 @@ function closeModal(){
 // @desciption for user to play Again 
 function playAgain(){
     modal.classList.remove("show");
-    //clearTimeout(lostGame);
     startGame();
 }
 
