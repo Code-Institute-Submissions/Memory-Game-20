@@ -354,6 +354,11 @@ section {
     text-align: center;
     color: black;
 
+    i {
+        color: black;
+        font-size: 1.5rem;
+    }
+
     button {
         padding: 0.5rem 1rem;
         border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
@@ -406,6 +411,15 @@ footer {
     .card {
         height: 5.5rem;
         width: 4.5rem;
+    }
+
+    .name-input, .timeout-modal, .overlay-congrats {
+        font-size: 1rem;
+        font-family: 'Varela Round', sans-serif;
+    }
+
+    .timeout-modal h2, .overlay-congrats h2 {
+        font-size: 1.2rem;
     }
 }
 
