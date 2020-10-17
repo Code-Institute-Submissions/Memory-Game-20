@@ -272,13 +272,13 @@ body {
   position: relative;
   -webkit-transition: all 5s ease-in-out;
   transition: all 5s ease-in-out;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Varela Round', sans-serif;
 }
 
 .popup h2 {
   margin-top: 0;
   color: #333;
-  font-family: Tahoma, Arial, sans-serif;
+  font-family: 'Varela Round', sans-serif;
 }
 
 .popup .close {
@@ -320,8 +320,46 @@ body {
   display: block;
   margin: 0 auto;
   width: 50%;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Varela Round', sans-serif;
   color: #ffffff;
   border-radius: 5px;
+}
+
+/* ==== Styles for timeout/gameover modal ===*/
+.overlay-timeout {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.timeout-modal {
+  margin: 13rem auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 5px;
+  width: 85%;
+  position: relative;
+  -webkit-transition: all 5s ease-in-out;
+  transition: all 5s ease-in-out;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1.3rem;
+  text-align: center;
+  color: black;
+}
+
+.timeout-modal button {
+  padding: 0.5rem 1rem;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  border: solid 5px #043b65;
+  -webkit-box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
+          box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
 }
 /*# sourceMappingURL=cards.css.map */

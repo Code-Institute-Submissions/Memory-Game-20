@@ -21,8 +21,10 @@ let starsList = document.querySelectorAll(".stars li");
  // close icon in modal
 let closeicon = document.querySelector(".close");
 
- // declare modal
+ // declare modals
+let firstOverlay = document.getElementById("popup-name");
 let modal = document.getElementById("popup-win");
+let timeoutModal = document.getElementById("popup-timeout");
 
  // array for opened cards
 var openedCards = [];
@@ -198,7 +200,7 @@ function moveCounter(){
         minute = 0; 
         hour = 0;
         startTimer();
-        card.addEventListener("click", lostGame);
+        lostGame();
     }
     // setting rates based on moves
     if (moves > 8 && moves < 12){
@@ -224,7 +226,7 @@ var timer = document.querySelector(".timer");
 var interval;
 function startTimer(){
     interval = setInterval(function(){
-        timer.innerHTML = second+"secs";
+        timer.innerHTML = second+" secs";
         second++;
         if(second == 60){
             minute++;
@@ -238,27 +240,28 @@ function startTimer(){
 }
 
 function lostGame(){
+    console.log("count " + countWin)
     console.log("lostGame checker")
-    if(countWin == 0){
+    if(countWin === 0){
         setTimeout( function(){
             if(matchedCard.length !== 16){
-                alert("60 seconds passed");
+                timeoutModal.classList.add("show");
                 console.log("60 seconds passed");
                 startGame();
-            }
-        }, 60000);
-    } else if(countWin == 1){
-        setTimeout( function(){
+            } 
+        }, 10000);
+    } else if(countWin === 1){
+        setTimeout( function doThis(){
             if(matchedCard.length !== 16){
-                alert("50 seconds passed");
+                timeoutModal.classList.add("show");
             } else {
                 return
             }
         }, 50000);
     } else {
-        setTimeout( function(){
+        setTimeout( function doThis(){
             if(matchedCard.length !== 16){
-                alert("45 seconds passed");
+                timeoutModal.classList.add("show");
             } else {
                 return
             }
@@ -270,7 +273,7 @@ function lostGame(){
 function congratulations(){
     if (matchedCard.length == 16){
         countWin++
-        clearTimeout(lostGame);
+        //clearTimeout(lostGame);
         clearInterval(interval);
         finalTime = timer.innerHTML;
 
@@ -304,6 +307,7 @@ function closeModal(){
 // @desciption for user to play Again 
 function playAgain(){
     modal.classList.remove("show");
+    timeoutModal.classList.remove("show");
     startGame();
 }
 
