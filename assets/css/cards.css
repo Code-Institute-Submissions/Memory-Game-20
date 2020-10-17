@@ -10,7 +10,13 @@ body {
   background-repeat: no-repeat;
   font-family: 'Permanent Marker', cursive;
   color: white;
-  padding: 1% 0 5% 0;
+  padding: 0;
+}
+
+section {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 .home {
@@ -18,8 +24,6 @@ body {
   top: 1%;
   right: 10%;
   padding: 0.3em;
-  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-  border: solid 5px white;
   -webkit-box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
           box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
   text-align: center;
@@ -371,5 +375,64 @@ body {
   border: solid 5px #043b65;
   -webkit-box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
           box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
+}
+
+/*===== FOOTER =======*/
+footer {
+  margin: 0;
+  padding-top: 0.5rem;
+  font-size: 0.7rem;
+  font-family: 'Varela Round', sans-serif;
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 2.5rem;
+  width: 100%;
+}
+
+/*===== MEDIA QUERIES =======*/
+@media (min-width: 320px) {
+  .home {
+    font-size: 1.5rem;
+    right: 5%;
+  }
+  .page-title {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    text-shadow: none;
+  }
+  .score-panel {
+    font-size: 1rem;
+    font-family: 'Varela Round', sans-serif;
+  }
+  .score-panel div {
+    text-align: center;
+  }
+  .cards-block {
+    background-color: transparent;
+    grid-gap: 0.2rem;
+  }
+  .card {
+    height: 5.5rem;
+    width: 4.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .home {
+    font-size: 1.7rem;
+    right: 10%;
+  }
+  .score-panel {
+    font-size: 1.2rem;
+    font-family: 'Varela Round', sans-serif;
+  }
+  .cards-block {
+    width: 80%;
+    grid-gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .card {
+    height: 10rem;
+    width: 8rem;
+  }
 }
 /*# sourceMappingURL=cards.css.map */

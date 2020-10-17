@@ -15,203 +15,222 @@
     <title>Game</title>
 </head>
 <body>
-    <section>
-        <div class="container-fluid">
-            <div class="home"><a href="index.html"><i class="fas fa-home"></i></a></div>
-            <div class="section-heading text-center my-5 text-uppercase">
-                <h1 class="page-title">Memory Game</h1>
-            </div>
-            <!-- SCORE PANEL -->
-            <div class="row score-panel">
-                <div id ="player-name" class="col player-name">
-                </div>
-                <div class="col rating-block text-center">
-                    <ul class="stars">
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                    </ul>
-                </div>
-                <div class="col moves-block"><span class="moves">0</span> Flips</div>
-                <div class="col timer">
-                </div>
-                <div class="col restart" onclick="startGame()">
-                    <i class="fas fa-redo"></i>
-                </div>
-            </div>
-            <!-- #SCORE PANEL -->
-            <!-- CARDS DECK BLOCK -->
-            <div class="cards-block" id="deck-block">
-                <div class="card "  data-peak="aconcagua">
-                    <div class="card-back card-face">
-                        <i class="fas fa-mountain"></i>
-                    </div>
-                    <div class="card-front card-face">
-                        <img class="card-value" src="assets/img/cards/Aconcagua2016.jpg">
-                    </div>
-                </div>
-                <div class="card "  data-peak="aconcagua">
-                    <div class="card-back card-face"> 
-                        <i class="fas fa-mountain"></i>
-                    </div>
-                    <div class="card-front card-face">
-                        <img class="card-value" src="assets/img/cards/Aconcagua2016.jpg">
-                    </div>
-                </div>
-                <div class="card "  data-peak="everest">
-                    <div class="card-back card-face">
-                        <i class="fas fa-mountain"></i>
-                    </div>
-                    <div class="card-front card-face">
-                        <img class="card-value" src="assets/img/cards/Everest_kalapatthar.jpg">
-                    </div>
-                </div>
-                <div class="card "  data-peak="everest">
-                    <div class="card-back card-face">
-                        <i class="fas fa-mountain"></i>
-                    </div>
-                    <div class="card-front card-face">
-                        <img class="card-value" src="assets/img/cards/Everest_kalapatthar.jpg">
-                    </div>
-                </div>
-                <div class="card "  data-peak="elbrus">
-                    <div class="card-back card-face">
-                        <i class="fas fa-mountain"></i>
-                    </div>
-                    <div class="card-front card-face">
-                        <img class="card-value" src="assets/img/cards/Mount_Elbrus_May_2008.jpg">
-                    </div>
-                </div>
-                <div class="card "  data-peak="elbrus">
-                    <div class="card-back card-face">
-                        <i class="fas fa-mountain"></i> 
-                    </div>
-                    <div class="card-front card-face">
-                        <img class="card-value" src="assets/img/cards/Mount_Elbrus_May_2008.jpg">
-                    </div>
-                </div>
-                <div class="card "  data-peak="kilimanjaro">
-                    <div class="card-back card-face">
-                        <i class="fas fa-mountain"></i>
-                    </div>
-                    <div class="card-front card-face">
-                        <img class="card-value" src="assets/img/cards/Mount_Kilimanjaro.jpg">
-                    </div>
-                </div>
-                <div class="card "  data-peak="kilimanjaro">
-                    <div class="card-back card-face">
-                        <i class="fas fa-mountain"></i> 
-                    </div>
-                    <div class="card-front card-face">
-                        <img class="card-value" src="assets/img/cards/Mount_Kilimanjaro.jpg">
-                    </div>
-                </div>
-                <div class="card "  data-peak="kosciuszko">
-                    <div class="card-back card-face">
-                        <i class="fas fa-mountain"></i>
-                    </div>
-                    <div class="card-front card-face">
-                        <img class="card-value" src="assets/img/cards/Mount_Kosciuszko.jpg">
-                    </div>
-                </div>
-                <div class="card "  data-peak="kosciuszko">
-                    <div class="card-back card-face">
-                        <i class="fas fa-mountain"></i>
-                    </div>
-                    <div class="card-front card-face">
-                        <img class="card-value" src="assets/img/cards/Mount_Kosciuszko.jpg">
-                    </div>
-                </div>
-                <div class="card "  data-peak="puncakjaya">
-                    <div class="card-back card-face">
-                        <i class="fas fa-mountain"></i>
-                    </div>
-                    <div class="card-front card-face">
-                        <img class="card-value" src="assets/img/cards/Puncakjaya.jpg">
-                    </div>
-                </div>
-                <div class="card "  data-peak="puncakjaya">
-                    <div class="card-back card-face">
-                        <i class="fas fa-mountain"></i>
-                    </div>
-                    <div class="card-front card-face">
-                        <img class="card-value" src="assets/img/cards/Puncakjaya.jpg">
-                    </div>
-                </div>
-                <div class="card "  data-peak="vinson">
-                    <div class="card-back card-face">
-                        <i class="fas fa-mountain"></i>
-                    </div>
-                    <div class="card-front card-face">
-                        <img class="card-value" src="assets/img/cards/Vinson_Massif.jpg">
-                    </div>
-                </div>
-                <div class="card "  data-peak="vinson">
-                    <div class="card-back card-face">
-                        <i class="fas fa-mountain"></i>
-                    </div>
-                    <div class="card-front card-face">
-                        <img class="card-value" src="assets/img/cards/Vinson_Massif.jpg">
-                    </div>
-                 </div>
-                <div class="card "  data-peak="denali">
-                    <div class="card-back card-face">
-                        <i class="fas fa-mountain"></i>
-                    </div>
-                    <div class="card-front card-face">
-                        <img class="card-value" src="assets/img/cards/Wonder_Lake_and_Denali.jpg">
-                    </div>
-                </div>
-                <div class="card "  data-peak="denali">
-                    <div class="card-back card-face">
-                        <i class="fas fa-mountain"></i>
-                    </div>
-                    <div class="card-front card-face">
-                        <img class="card-value" src="assets/img/cards/Wonder_Lake_and_Denali.jpg">
-                    </div>
-                </div>
-            </div>
-            <!-- #CARDS DECK BLOCK -->
-            <!-- ENTER NAME MODAL -->
-            <div id="popup-name" class="overlay-name visible">
-                <div class="name-input" data-aos="fade-down">
-                    <label for="fname">Player name:</label><br>
-                    <input type="text" id="pname" name="pname" required><br>
-                    <button id="level" class="button mt-5 mb-3" onclick="username()">Start</button>
-                </div>
-            </div>
-            <!-- #ENTER NAME MODAL -->
-            <!-- WIN GAME MODAL -->
-            <div id="popup-win" class="overlay-congrats">
-                <div class="popup">
-                    <i class="far fa-smile-beam"></i>
-                    <h2>Great Game,<span id="gamer"></span></h2>
-                    <a class="close" href=# >×</a>
-                    <div class="content-1">
-                        <p>Level <span id="level-number"></span></p>
-                        <p>You made <span id=finalMove> </span> moves </p>
-                        <p>in <span id=totalTime> </span> </p>
-                        <p>Rating:  <span id=starRating></span></p>
-                    </div>
-                    <button id="play-again" onclick="playNext()">
-                        <a>Play <span id="check-level"></span></a>
-                    </button>
-                </div>
-            </div>
-            <!-- #WIN GAME MODAL -->
-            <!-- TIMEOUT MODAL -->
-            <div id="popup-timeout" class="overlay-timeout">
-                <div class="timeout-modal" data-aos="fade-down">
-                    <h2>GAME OVER</h2>
-                    <p>Level <span id="game-level"></span>:  <span id="seconds-timeout"></span> seconds have passed</p>
-                    <button id="play-again2"onclick="playAgain()">
-                        Play Again</a>
-                    </button>
-                </div>
-            </div>
-            <!-- #TIMEOUT MODAL -->
+    <!-- HEADER AREA -->
+    <header>
+        <div class="home"><a href="index.html"><i class="fas fa-home"></i></a></div>
+        <div class="section-heading text-center my-5 text-uppercase">
+            <h1 class="page-title">Memory Game</h1>
         </div>
-    </section>
+    </header>
+    <!-- #HEADER AREA -->
+    <!-- MAIN AREA -->
+    <main>
+        <section>
+            <div class="container-fluid">
+                <!-- SCORE PANEL -->
+                <div class="row score-panel">
+                    <div id ="player-name" class="col col-sm-2.4 player-name">
+                    </div>
+                    <div class="col col-sm-2.4 rating-block text-center">
+                        <ul class="stars">
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                        </ul>
+                    </div>
+                    <div class="col col-sm-2.4 moves-block"><span class="moves">0</span> Flips</div>
+                    <div class="col col-sm-2.4 timer">
+                    </div>
+                    <div class="col col-sm-2.4 restart" onclick="startGame()">
+                        <i class="fas fa-redo"></i>
+                    </div>
+                </div>
+                <!-- #SCORE PANEL -->
+                <!-- CARDS DECK BLOCK -->
+                <div class="cards-block" id="deck-block">
+                    <div class="card "  data-peak="aconcagua">
+                        <div class="card-back card-face">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="card-front card-face">
+                            <img class="card-value" src="assets/img/cards/Aconcagua2016.jpg" alt="Aconcagua">
+                        </div>
+                    </div>
+                    <div class="card "  data-peak="aconcagua">
+                        <div class="card-back card-face"> 
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="card-front card-face">
+                            <img class="card-value" src="assets/img/cards/Aconcagua2016.jpg" alt="Aconcagua">
+                        </div>
+                    </div>
+                    <div class="card "  data-peak="everest">
+                        <div class="card-back card-face">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="card-front card-face">
+                            <img class="card-value" src="assets/img/cards/Everest_kalapatthar.jpg" alt="Everest">
+                        </div>
+                    </div>
+                    <div class="card "  data-peak="everest">
+                        <div class="card-back card-face">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="card-front card-face">
+                            <img class="card-value" src="assets/img/cards/Everest_kalapatthar.jpg" alt="Everest">
+                        </div>
+                    </div>
+                    <div class="card "  data-peak="elbrus">
+                        <div class="card-back card-face">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="card-front card-face">
+                            <img class="card-value" src="assets/img/cards/Mount_Elbrus_May_2008.jpg" alt="Elbrus">
+                        </div>
+                    </div>
+                    <div class="card "  data-peak="elbrus">
+                        <div class="card-back card-face">
+                            <i class="fas fa-mountain"></i> 
+                        </div>
+                        <div class="card-front card-face">
+                            <img class="card-value" src="assets/img/cards/Mount_Elbrus_May_2008.jpg" alt="Elbrus">
+                        </div>
+                    </div>
+                    <div class="card "  data-peak="kilimanjaro">
+                        <div class="card-back card-face">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="card-front card-face">
+                            <img class="card-value" src="assets/img/cards/Mount_Kilimanjaro.jpg" alt="Kilimanjaro">
+                        </div>
+                    </div>
+                    <div class="card "  data-peak="kilimanjaro">
+                        <div class="card-back card-face">
+                            <i class="fas fa-mountain"></i> 
+                        </div>
+                        <div class="card-front card-face">
+                            <img class="card-value" src="assets/img/cards/Mount_Kilimanjaro.jpg" alt="Kilimanjaro">
+                        </div>
+                    </div>
+                    <div class="card "  data-peak="kosciuszko">
+                        <div class="card-back card-face">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="card-front card-face">
+                            <img class="card-value" src="assets/img/cards/Mount_Kosciuszko.jpg" alt="Kosciuszko">
+                        </div>
+                    </div>
+                    <div class="card "  data-peak="kosciuszko">
+                        <div class="card-back card-face">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="card-front card-face">
+                            <img class="card-value" src="assets/img/cards/Mount_Kosciuszko.jpg" alt="Kosciuszko">
+                        </div>
+                    </div>
+                    <div class="card "  data-peak="puncakjaya">
+                        <div class="card-back card-face">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="card-front card-face">
+                            <img class="card-value" src="assets/img/cards/Puncakjaya.jpg" alt="Puncakjaya">
+                        </div>
+                    </div>
+                    <div class="card "  data-peak="puncakjaya">
+                        <div class="card-back card-face">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="card-front card-face">
+                            <img class="card-value" src="assets/img/cards/Puncakjaya.jpg" alt="Puncakjaya">
+                        </div>
+                    </div>
+                    <div class="card "  data-peak="vinson">
+                        <div class="card-back card-face">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="card-front card-face">
+                            <img class="card-value" src="assets/img/cards/Vinson_Massif.jpg" alt="Vinson">
+                        </div>
+                    </div>
+                    <div class="card "  data-peak="vinson">
+                        <div class="card-back card-face">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="card-front card-face">
+                            <img class="card-value" src="assets/img/cards/Vinson_Massif.jpg" alt="Vinson">
+                        </div>
+                    </div>
+                    <div class="card "  data-peak="denali">
+                        <div class="card-back card-face">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="card-front card-face">
+                            <img class="card-value" src="assets/img/cards/Wonder_Lake_and_Denali.jpg" alt="Denali">
+                        </div>
+                    </div>
+                    <div class="card "  data-peak="denali">
+                        <div class="card-back card-face">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="card-front card-face">
+                            <img class="card-value" src="assets/img/cards/Wonder_Lake_and_Denali.jpg" alt="Denali">
+                        </div>
+                    </div>
+                </div>
+                <!-- #CARDS DECK BLOCK -->
+                <!-- ENTER NAME MODAL -->
+                <div id="popup-name" class="overlay-name visible">
+                    <div class="name-input" data-aos="fade-down">
+                        <label for="fname">Player name:</label><br>
+                        <input type="text" id="pname" name="pname" required><br>
+                        <button id="level" class="button mt-5 mb-3" onclick="username()">Start</button>
+                    </div>
+                </div>
+                <!-- #ENTER NAME MODAL -->
+                <!-- WIN GAME MODAL -->
+                <div id="popup-win" class="overlay-congrats">
+                    <div class="popup">
+                        <i class="far fa-smile-beam"></i>
+                        <h2>Great Game,<span id="gamer"></span></h2>
+                        <a class="close" href=# >×</a>
+                        <div class="content-1">
+                            <p>Level <span id="level-number"></span></p>
+                            <p>You made <span id=finalMove> </span> moves </p>
+                            <p>in <span id=totalTime> </span> </p>
+                            <p>Rating:  <span id=starRating></span></p>
+                        </div>
+                        <button id="play-again" onclick="playNext()">
+                            <a>Play <span id="check-level"></span></a>
+                        </button>
+                    </div>
+                </div>
+                <!-- #WIN GAME MODAL -->
+                <!-- TIMEOUT MODAL -->
+                <div id="popup-timeout" class="overlay-timeout">
+                    <div class="timeout-modal" data-aos="fade-down">
+                        <h2>GAME OVER</h2>
+                        <p>Level <span id="game-level"></span>:  <span id="seconds-timeout"></span> seconds have passed</p>
+                        <button id="play-again2"onclick="playAgain()">
+                            Play Again</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- #TIMEOUT MODAL -->
+            </div>
+        </section>
+    </main>
+    <!-- MAIN AREA -->
+    <!--FOOTER AREA -->
+    <footer>
+        <div class="container footer-social">
+            <div class="row no-gutters text-center">
+                <div class="col text-white">
+                    <p>&copy; Lyubomila Petkova 2020</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--#FOOTER AREA -->
      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
