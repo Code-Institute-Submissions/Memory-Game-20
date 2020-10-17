@@ -184,18 +184,17 @@
             <!-- WIN GAME MODAL -->
             <div id="popup-win" class="overlay-congrats">
                 <div class="popup">
-                    <h2>Great Game 🎉</h2>
+                    <i class="far fa-smile-beam"></i>
+                    <h2>Great Game,<span id="gamer"></span></h2>
                     <a class="close" href=# >×</a>
                     <div class="content-1">
-                       <span id="gamer"></span>
-                    </div>
-                    <div class="content-2">
+                        <p>Level <span id="level-number"></span></p>
                         <p>You made <span id=finalMove> </span> moves </p>
                         <p>in <span id=totalTime> </span> </p>
                         <p>Rating:  <span id=starRating></span></p>
                     </div>
-                    <button id="play-again"onclick="playNext()">
-                        <a>Play next level</a>
+                    <button id="play-again" onclick="playNext()">
+                        <a>Play <span id="check-level"></span></a>
                     </button>
                 </div>
             </div>
@@ -204,7 +203,7 @@
             <div id="popup-timeout" class="overlay-timeout">
                 <div class="timeout-modal" data-aos="fade-down">
                     <h2>GAME OVER</h2>
-                    <p>Level 1:  60 seconds have passed</p>
+                    <p>Level <span id="game-level"></span>:  <span id="seconds-timeout"></span> seconds have passed</p>
                     <button id="play-again2"onclick="playAgain()">
                         Play Again</a>
                     </button>

@@ -260,7 +260,13 @@ body {
 	width: 85%;
 	position: relative;
 	transition: all 5s ease-in-out;
-	font-family: 'Varela Round', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+    text-align: center;
+}
+
+.popup i {
+    color: black;
+    font-size: 1.5rem;
 }
   
 .popup h2 {
@@ -284,8 +290,8 @@ body {
 	color: #E5F720;
 }
 
-.popup .content-1,
-.content-2 {
+.popup .content-1 {
+    color: black;
 	max-height: 30%;
 	overflow: auto;
 	text-align: center;
@@ -301,15 +307,18 @@ body {
 }
 
 #play-again {
-	background-color: #141214;
+	background-color: #ffffff;
 	padding: 0.7rem 1rem;
 	font-size: 1.1rem;
 	display: block;
 	margin: 0 auto;
 	width: 50%;
 	font-family: 'Varela Round', sans-serif;
-	color: #ffffff;
-	border-radius: 5px;
+	color: #000000;
+	padding: 0.5rem 1rem;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    border: solid 5px rgb(4, 59, 101);
+    box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
 }
 
 /* ==== Styles for timeout/gameover modal ===*/

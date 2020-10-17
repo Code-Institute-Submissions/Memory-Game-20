@@ -32,6 +32,13 @@ var openedCards = [];
 // count the complete games
 var countWin = 0;
 
+// game timer
+var second = 0; 
+var minute = 0; 
+var hour = 0;
+var timer = document.querySelector(".timer");
+var interval;
+
 //game timeout variable
 let gameOver;
 
@@ -224,10 +231,6 @@ function moveCounter(){
 }
 
 
-// @description game timer
-var second = 0, minute = 0; hour = 0;
-var timer = document.querySelector(".timer");
-var interval;
 function startTimer(){
     interval = setInterval(function(){
         timer.innerHTML = second+" secs";
@@ -249,27 +252,34 @@ function lostGame(){
     if(countWin === 0){
         gameOver = setTimeout( function(){
             if(matchedCard.length !== 16){
+                document.getElementById("game-level").innerHTML = "1";
+                document.getElementById("seconds-timeout").innerHTML = "60";
                 timeoutModal.classList.add("show");
-                console.log("60 seconds passed");
                 startGame();
             } 
-        }, 10000);
+        }, 62000);
     } else if(countWin === 1){
         gameOver = setTimeout( function doThis(){
             if(matchedCard.length !== 16){
+                document.getElementById("game-level").innerHTML = "2";
+                document.getElementById("seconds-timeout").innerHTML = "55";
                 timeoutModal.classList.add("show");
+                startGame();
             } else {
                 return
             }
-        }, 50000);
+        }, 57000);
     } else {
         gameOver = setTimeout( function doThis(){
             if(matchedCard.length !== 16){
+                document.getElementById("game-level").innerHTML = "3";
+                document.getElementById("seconds-timeout").innerHTML = "50";
                 timeoutModal.classList.add("show");
+                startGame();
             } else {
                 return
             }
-        }, 45000);
+        }, 52000);
     }
 }
 
@@ -289,9 +299,16 @@ function congratulations(){
 
         //showing move, rating, time on modal
         document.getElementById("gamer").innerHTML = document.getElementById("pname").value;
+        document.getElementById("level-number").innerHTML = countWin;
         document.getElementById("finalMove").innerHTML = moves;
         document.getElementById("starRating").innerHTML = starRating;
         document.getElementById("totalTime").innerHTML = finalTime;
+
+        if(countWin==3){
+            document.getElementById("check-level").innerHTML = "again";
+        }else{
+            document.getElementById("check-level").innerHTML = "next level";
+        }
 
         //closeicon on modal
         closeModal();
@@ -310,7 +327,7 @@ function closeModal(){
 
 // @desciption for user to play Again 
 function playNext(){
-    timeoutModal.classList.remove("show");
+    modal.classList.remove("show");
     startGame();
 }
 
