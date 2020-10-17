@@ -29,8 +29,11 @@ let timeoutModal = document.getElementById("popup-timeout");
  // array for opened cards
 var openedCards = [];
 
+// count the complete games
 var countWin = 0;
 
+//game timeout variable
+let gameOver;
 
 // @description shuffles cards
 // @param {array}
@@ -100,6 +103,7 @@ function startGame(){
     var timer = document.querySelector(".timer");
     timer.innerHTML = "0  secs";
     clearInterval(interval);
+    clearTimeout(gameOver);
 }
 
 
@@ -243,7 +247,7 @@ function lostGame(){
     console.log("count " + countWin)
     console.log("lostGame checker")
     if(countWin === 0){
-        setTimeout( function(){
+        gameOver = setTimeout( function(){
             if(matchedCard.length !== 16){
                 timeoutModal.classList.add("show");
                 console.log("60 seconds passed");
@@ -251,7 +255,7 @@ function lostGame(){
             } 
         }, 10000);
     } else if(countWin === 1){
-        setTimeout( function doThis(){
+        gameOver = setTimeout( function doThis(){
             if(matchedCard.length !== 16){
                 timeoutModal.classList.add("show");
             } else {
@@ -259,7 +263,7 @@ function lostGame(){
             }
         }, 50000);
     } else {
-        setTimeout( function doThis(){
+        gameOver = setTimeout( function doThis(){
             if(matchedCard.length !== 16){
                 timeoutModal.classList.add("show");
             } else {
@@ -305,8 +309,13 @@ function closeModal(){
 
 
 // @desciption for user to play Again 
+function playNext(){
+    timeoutModal.classList.remove("show");
+    startGame();
+}
+
+// for user to play next Level
 function playAgain(){
-    modal.classList.remove("show");
     timeoutModal.classList.remove("show");
     startGame();
 }
