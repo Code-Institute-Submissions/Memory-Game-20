@@ -245,8 +245,6 @@ function lostGame(){
                 alert("60 seconds passed");
                 console.log("60 seconds passed");
                 startGame();
-            } else {
-                return
             }
         }, 60000);
     } else if(countWin == 1){
