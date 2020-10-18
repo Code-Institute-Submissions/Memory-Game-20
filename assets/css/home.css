@@ -258,18 +258,18 @@ footer {
 /*===== MEDIA QUERIES =======*/
 @media (min-width: 320px) {
   .header-box h1 {
-    top: 20%;
+    top: 18%;
   }
   .rules-btn, .play-btn {
     font-size: 0.8em;
     padding: 0.5rem;
   }
   .rules-btn {
-    top: 48%;
+    top: 50%;
     left: 35%;
   }
   .play-btn {
-    top: 58%;
+    top: 60%;
     left: 35%;
   }
   .rules {
@@ -329,11 +329,11 @@ footer {
     margin: 10% 0 7% 0;
   }
   .rules-btn {
-    top: 38%;
+    top: 45%;
     left: 41%;
   }
   .play-btn {
-    top: 38%;
+    top: 45%;
     left: 51%;
   }
   .lets-play-btn {

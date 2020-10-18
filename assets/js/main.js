@@ -1,3 +1,7 @@
+/* 
+This is shared javascript for the pages animations 
+*/
+
 /*====== RELLAX =====*/
 var ellax = new Rellax('.rellax');
 
