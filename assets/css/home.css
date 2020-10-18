@@ -34,7 +34,6 @@ header .container-fluid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  top: 25%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -296,12 +295,15 @@ footer {
 }
 
 @media (min-width: 768px) {
+  .header-box h1 {
+    top: 25%;
+  }
   .rules-btn {
-    top: 30%;
+    top: 40%;
     left: 34%;
   }
   .play-btn {
-    top: 30%;
+    top: 40%;
     left: 53%;
   }
   .section-rules h2 {

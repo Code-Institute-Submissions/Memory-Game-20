@@ -32,7 +32,6 @@ header .container-fluid {
         position: absolute;
         width: 100%;
         display: flex;
-        top: 25%;
         justify-content: center;
         color: #FFFFFF;
         -webkit-text-stroke: 0.2rem rgb(4, 59, 101);
@@ -343,13 +342,18 @@ footer {
 }
 
 @media (min-width: 768px ) {
+
+    .header-box h1 {
+        top: 25%;
+    }
+
     .rules-btn {   
-        top: 30%;    
+        top: 40%;    
         left: 34%;
     }
     
     .play-btn {
-        top: 30%;
+        top: 40%;
         left: 53%;
     }
 
