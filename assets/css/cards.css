@@ -43,8 +43,7 @@ section {
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (auto)[5];
-      grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(5, auto);
   grid-gap: 10px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -79,8 +78,7 @@ section {
           box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (auto)[4];
-      grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(4, auto);
   grid-gap: 1rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
