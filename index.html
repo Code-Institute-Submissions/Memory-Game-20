@@ -8,8 +8,6 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"/>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <!--AOS-->
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/home.css">
         <title>Memory Game</title>
     </head>
@@ -18,9 +16,9 @@
         <header>
             <div class="container-fluid">
                 <div class="header-box position-relative text-center">
-                    <h1 class="display-4 rellax" data-rellax-speed="-6">Memory Game</h1>
-                    <a class="btn rules-btn text-uppercase text-white rellax" href="#game-rules" target="#" data-rellax-speed="-5" >Rules</a>
-                    <a class="btn play-btn text-uppercase text-white rellax" href="cards.html" target="#" data-rellax-speed="-5" >Play</a>
+                    <h1 class="display-4 header_title rellax" data-rellax-speed="-6">Memory Game</h1>
+                    <a class="btn rules-btn text-uppercase text-white header_button rellax" href="#game-rules" target="#" data-rellax-speed="-5" >Rules</a>
+                    <a class="btn play-btn text-uppercase text-white header_button rellax" href="cards.html" target="#" data-rellax-speed="-5" >Play</a>
 
                     <div class="sky img-fluid rellax"></div>
                     <div class="cloud1 rellax"></div>
@@ -38,8 +36,8 @@
         <main>
             <section class="rules" id="game-rules">
                 <div class="container rules-box">
-                    <div class="section-rules col text-center text-white"  data-aos="fade-up">
-                        <h2 class="text-uppercase">How to play?</h2>
+                    <div class="section-rules col text-center text-white">
+                        <h2 class="rules_title text-uppercase">How to play?</h2>
                         <p class="game-rules">Memory Game is game for one player in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn. The object of the game is to turn over pairs of matching cards.  The theme of this game is  <a href="https://en.m.wikipedia.org/wiki/Eight_Summits" target="_blank">The Eight Summits</a> - "collective name for eight highest mountains in the seven continents".<br>
                                 On loading the game the player has to type a nickname. After this the player will see a deck of 16 cards, 4x4, laid face down. Above the deck can be find the score panel, starting with the player’s name, stars rating of the performance on the base of the number of made moves, the number of the flips, timer in seconds and restart button. The game has 3 levels of difficulty  During the first game, which is also first level of the game,  the player has 60 seconds to pair the matching cards. On successful completion, the player continues to the second level in which the time decrease to 55 seconds, after which continues to the last third level - 50 seconds.</p>
                         <p class="lets-play">Let's Play!</p>
@@ -66,8 +64,10 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <!-- RELLAX JS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
-        <!-- AOS -->
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+        <!-- SCROLL REVEAL -->
+        <script src="https://unpkg.com/scrollreveal"></script>
         <!-- MAIN JS -->
         <script src="assets/js/main.js"></script>
     </body>

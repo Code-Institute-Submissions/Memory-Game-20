@@ -213,12 +213,21 @@ header .container-fluid {
 }
 
 .game-rules {
-  color: #FFFFFF;
   font-size: 1.1rem;
-  opacity: 0.6;
   font-family: 'Varela Round', sans-serif;
   width: 100%;
   text-align: center;
+}
+
+.game-rules p {
+  color: #FFFFFF;
+  font-weight: normal;
+}
+
+.game-rules a {
+  text-decoration: none;
+  color: #85c7e9 !important;
+  font-weight: bold;
 }
 
 .lets-play {

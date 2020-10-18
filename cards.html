@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"/>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <!--AOS-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/cards.css">
     
     <title>Game</title>
@@ -180,7 +178,7 @@
                 <!-- #CARDS DECK BLOCK -->
                 <!-- ENTER NAME MODAL -->
                 <div id="popup-name" class="overlay-name visible">
-                    <div class="name-input" data-aos="fade-down">
+                    <div class="name-input">
                         <label for="pname">Player name:</label><br>
                         <input type="text" id="pname" name="pname" required><br>
                         <button id="level" class="button mt-5 mb-3" onclick="username()">Start</button>
@@ -189,7 +187,7 @@
                 <!-- #ENTER NAME MODAL -->
                 <!-- WIN GAME MODAL -->
                 <div id="popup-win" class="overlay-congrats">
-                    <div class="popup" data-aos="fade-down">
+                    <div class="popup">
                         <i class="far fa-smile-beam"></i>
                         <h2>Great Game,<span id="gamer"></span></h2>
                         <a class="close" href=# >×</a>
@@ -207,7 +205,7 @@
                 <!-- #WIN GAME MODAL -->
                 <!-- TIMEOUT MODAL -->
                 <div id="popup-timeout" class="overlay-timeout">
-                    <div class="timeout-modal" data-aos="fade-down">
+                    <div class="timeout-modal">
                         <i class="far fa-frown"></i>
                         <h2>GAME OVER</h2>
                         <p>Level <span id="game-level"></span>:  <span id="seconds-timeout"></span> seconds have passed</p>
@@ -238,8 +236,10 @@
      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
      <!-- RELLAX JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
-    <!-- AOS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <!-- SCROLL REVEAL -->
+    <script src="https://unpkg.com/scrollreveal"></script>
     <!-- MAIN JS -->
     <script src="assets/js/main.js"></script>
     <!-- GAME JS -->
