@@ -58,7 +58,6 @@ header .container-fluid {
     z-index: 9;
     position: absolute;
     top: 30%;
-    margin-top: 50px;
     padding: 0.5em;
     width: 7rem;
     background: white;
@@ -69,7 +68,7 @@ header .container-fluid {
     font-size: 0.9em;
     font-weight: bold;
     text-transform: uppercase;
-    color: #002c49 !important;
+    color: #002c49;
     text-decoration: none;
     cursor: pointer;
 }
@@ -81,6 +80,8 @@ header .container-fluid {
 .play-btn {
     left: 38%;
 }
+
+/*===== MOUNTAIN LAYERS =====*/
 
 .sky {
     background-image: url("../img/home_page/img1.png");
@@ -182,10 +183,6 @@ header .container-fluid {
     transform: translateY(200px);
 }
 
-.bottom-page {
-    padding:0;
-    color: white;
-}
 
 /*===== RULES PAGE =====*/
 
