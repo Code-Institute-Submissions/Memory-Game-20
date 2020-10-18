@@ -1,3 +1,7 @@
+/*
+This javascript is only for the cards game
+*/
+
 // cards array holds all cards
 let card = document.getElementsByClassName("card");
 let cards = [...card];
@@ -27,24 +31,20 @@ let modal = document.getElementById("popup-win");
 let timeoutModal = document.getElementById("popup-timeout");
 
  // array for opened cards
-var openedCards = [];
+let openedCards = [];
 
 // count the complete games
-var countWin = 0;
+let countWin = 0;
 
 // game timer
-var second = 0; 
-var minute = 0; 
-var hour = 0;
-var timer = document.querySelector(".timer");
-var interval;
+let second = 0; 
+let timer = document.querySelector(".timer");
+let interval;
 
 //game timeout variable
 let gameOver;
 
-// @description shuffles cards
-// @param {array}
-// @returns shuffledarray
+// shuffles cards array
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -59,6 +59,7 @@ function shuffle(array) {
     return array;
 };
 
+// require user to input player name
 function username(){
     var pname = document.getElementById("pname").value;
     if (pname == ""){
@@ -71,18 +72,16 @@ function username(){
 }
 
 
-// @description shuffles cards when page is refreshed / loads
+//shuffles cards when page is refreshed / loads
 document.body.onload = startGame();
 
 
-// @description function to start a new play 
+//function to start a new play 
 function startGame(){
-    console.log(countWin);
+    //if 3rd successful game 0 the count - go back to level 1 
     if(countWin==3){
         countWin == 0;
     }
-    console.log("after cleanup " + countWin);
-    // empty the openCards array
     openedCards = [];
 
     // shuffle deck
@@ -105,8 +104,6 @@ function startGame(){
     }
     //reset timer
     second = 0;
-    minute = 0; 
-    hour = 0;
     var timer = document.querySelector(".timer");
     timer.innerHTML = "0  secs";
     clearInterval(interval);
@@ -114,75 +111,56 @@ function startGame(){
 }
 
 
-// @description toggles open and show class to display cards
+//toggles open class to display cards
 var displayCard = function (){
     this.classList.toggle("open");
-    //this.classList.toggle("show");
-    //this.classList.toggle("disabled");
 };
 
 
-// @description add opened cards to OpenedCards list and check if cards are match or not
+//add opened cards to OpenedCards list and check if cards are match or not
 function cardOpen() {
+    // add disable to prevent double clicking on the same card
     this.classList.add("disabled");
     openedCards.push(this);
     var len = openedCards.length;
-    console.log("after the push: " + len)
-    if(len < 2){
-        console.log("Less than 2")
-    }
-    else if(len === 2){
+
+    //if(len < 2){
+        //console.log("Less than 2")
+    //}
+    if(len === 2){
         moveCounter();
         if(openedCards[0].dataset.peak === openedCards[1].dataset.peak){
-            console.log(openedCards[0].dataset.peak)
-            console.log(openedCards[1].dataset.peak)
             matched();
         } else {
-            console.log(openedCards[0].dataset.peak)
-            console.log(openedCards[0].classList)
-            console.log(openedCards[1].dataset.peak)
-            console.log(openedCards[1].classList)
             unmatched();
         }
-    }
-    else {
-        console.log("It already contains 2 items")
-        return;
     }
 };
 
 
-// @description when cards match
+//when cards match
 function matched(){
     openedCards[0].classList.add("match", "disabled");
     openedCards[1].classList.add("match", "disabled");
-    //openedCards[0].classList.remove("open");
-    //openedCards[1].classList.remove("open");
     openedCards = [];
 }
 
 
-// description when cards don't match
+//when cards don't match
 function unmatched(){
     openedCards[0].classList.add("unmatched");
     openedCards[1].classList.add("unmatched");
     disable();
-    console.log(openedCards[0].classList)
-    console.log(openedCards[1].classList)
     setTimeout(function(){
         openedCards[0].classList.remove("open");
         openedCards[1].classList.remove("open");
-        console.log(openedCards[0].classList);
-        console.log(openedCards[1].classList);
         enable();
-        console.log(openedCards[0].classList);
-        console.log(openedCards[1].classList);
         openedCards = [];
     },1100);
 }
 
 
-// @description disable cards temporarily
+//disable cards temporarily
 function disable(){
     Array.prototype.filter.call(cards, function(card){
         card.classList.add('disabled');
@@ -190,7 +168,7 @@ function disable(){
 }
 
 
-// @description enable cards and disable matched cards
+//enable cards and disable matched cards
 function enable(){
     Array.prototype.filter.call(cards, function(card){
         card.classList.remove('disabled');
@@ -201,15 +179,13 @@ function enable(){
 }
 
 
-// @description count player's moves
+//count player's moves
 function moveCounter(){
     moves++;
     counter.innerHTML = moves;
-    //start timer on first click
+    //start timer  and timeout checking on first click
     if(moves == 1){
         second = 0;
-        minute = 0; 
-        hour = 0;
         startTimer();
         lostGame();
     }
@@ -230,25 +206,17 @@ function moveCounter(){
     }
 }
 
-
+// seconds timer function
 function startTimer(){
     interval = setInterval(function(){
         timer.innerHTML = second+" secs";
         second++;
-        if(second == 60){
-            minute++;
-            second=0;
-        }
-        if(minute == 60){
-            hour++;
-            minute = 0;
-        }
     },1000);
 }
 
+// set timeout for each level
 function lostGame(){
-    console.log("count " + countWin)
-    console.log("lostGame checker")
+    //level 1
     if(countWin === 0){
         gameOver = setTimeout( function(){
             if(matchedCard.length !== 16){
@@ -259,6 +227,7 @@ function lostGame(){
             } 
         }, 62000);
     } else if(countWin === 1){
+        //level 2
         gameOver = setTimeout( function doThis(){
             if(matchedCard.length !== 16){
                 document.getElementById("game-level").innerHTML = "2";
@@ -270,6 +239,7 @@ function lostGame(){
             }
         }, 57000);
     } else {
+        //level 3
         gameOver = setTimeout( function doThis(){
             if(matchedCard.length !== 16){
                 document.getElementById("game-level").innerHTML = "3";
@@ -283,7 +253,7 @@ function lostGame(){
     }
 }
 
-// @description congratulations when all cards match, show modal and moves, time and rating
+//congratulations when all cards match, show modal with name, level, moves, time and rating
 function congratulations(){
     if (matchedCard.length == 16){
         countWin++
@@ -297,26 +267,27 @@ function congratulations(){
         // declare star rating variable
         var starRating = document.querySelector(".stars").innerHTML;
 
-        //showing move, rating, time on modal
+        //showing name, level, move, rating, time on modal
         document.getElementById("gamer").innerHTML = document.getElementById("pname").value;
         document.getElementById("level-number").innerHTML = countWin;
         document.getElementById("finalMove").innerHTML = moves;
         document.getElementById("starRating").innerHTML = starRating;
         document.getElementById("totalTime").innerHTML = finalTime;
 
+        //define the modal button value depending on the level
         if(countWin==3){
             document.getElementById("check-level").innerHTML = "again";
         }else{
             document.getElementById("check-level").innerHTML = "next level";
         }
 
-        //closeicon on modal
+        //close icon on modal
         closeModal();
     };
 }
 
 
-// @description close icon on modal
+//close icon on modal
 function closeModal(){
     closeicon.addEventListener("click", function(e){
         modal.classList.remove("show");
@@ -325,13 +296,13 @@ function closeModal(){
 }
 
 
-// @desciption for user to play Again 
+//for user to play next level
 function playNext(){
     modal.classList.remove("show");
     startGame();
 }
 
-// for user to play next Level
+// for user to play again
 function playAgain(){
     timeoutModal.classList.remove("show");
     startGame();
