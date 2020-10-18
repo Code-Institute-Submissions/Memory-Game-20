@@ -15,18 +15,18 @@ body {
 
 header {
     width: 100%;
-    height: 100vh;
     box-sizing: border-box;
 }
 
 header .container-fluid {
     padding: 0;
-    height: 100vh;
 }
 
 .header-box {
     width: 100%;
     height: 100vh;
+    overflow: hidden;
+    position: relative;
 
     h1 {
         position: absolute;
@@ -36,7 +36,6 @@ header .container-fluid {
         justify-content: center;
         color: #FFFFFF;
         -webkit-text-stroke: 0.2rem rgb(4, 59, 101);
-        //box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
         letter-spacing: 0.3rem;
         font-family: 'Permanent Marker', cursive;
         z-index: 5;
@@ -192,19 +191,15 @@ header .container-fluid {
 
 .rules {
     width: 100%;
-    height: 100vh;
     padding: 15% 10%;
-    position: absolute;
-    z-index: 10;
     display: block;
     box-sizing: border-box;
     background: #002c49;
 }
 
-.rules div {
-    height: 100%;
+.rules-box {
+    background: #002c49;
 }
-
 
 .section-rules h2 {
     color: #FFFFFF;
@@ -231,7 +226,6 @@ header .container-fluid {
 .game-rules {
     color: #FFFFFF;
     font-size: 1.1rem;
-    margin-top:10%;
     opacity: 0.6;
     font-family: 'Varela Round', sans-serif;
     width: 100%;
@@ -281,12 +275,9 @@ header .container-fluid {
 footer {
     margin: 0;
     font-size: 0.7rem;
-    position: absolute;
-    z-index: 10;
     display: block;
     box-sizing: border-box;
     background-color: rgba(0,0,0,.1);
-    bottom:-100%;
     width: 100%;
 }
 
@@ -329,6 +320,7 @@ footer {
 
     .game-rules {
         font-size: 1rem;
+        margin: 15% 0;
     }
 
     .lets-play {
@@ -339,10 +331,7 @@ footer {
     .lets-play-btn {
         font-size: 3rem;
         text-shadow: none;
-    }
-
-    footer {
-        bottom:-120%;
+        margin: 5% 0;
     }
 }
 
@@ -374,12 +363,18 @@ footer {
         text-shadow: none;
     }
 
-    footer {
-        bottom:-100%;
-    }
 }
 
 @media (min-width: 992px ) {
+
+    .rules {
+        padding: 10% 5%;
+    }
+
+    .game-rules {
+        margin:10% 0 7% 0;
+    }
+
     .rules-btn{   
         top: 38%;    
         left: 41%;
@@ -389,7 +384,11 @@ footer {
         top: 38%;
         left: 51%;
     }
+
+    .lets-play-btn {
+        margin: 10% 0;
+    }
+
 }
 
-@media (min-width: 1200px) {}
 
