@@ -343,17 +343,21 @@ footer {
 
 @media (min-width: 768px ) {
 
+    .rules {
+        height: 100vh;
+    }
+
     .header-box h1 {
         top: 25%;
     }
 
     .rules-btn {   
-        top: 45%;    
+        top: 40%;    
         left: 34%;
     }
     
     .play-btn {
-        top: 45%;
+        top: 40%;
         left: 53%;
     }
 
