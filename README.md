@@ -2,7 +2,7 @@
 
 View the live project [here](https://leoney.github.io/Memory-Game/)
 
-This is a single player memory match cards game with theme - The Eight Summits: "collective name for eight highest mountains in the seven continents". The intention is the game not only to help improve the player memory but trigger curiocity and interest in learning more about the highest summits on the seven continents.  
+This is a single player memory match cards game with theme - The Eight Summits: "collective name for eight highest mountains in the seven continents". The intention is the game is not only to help improve the player's memory but trigger curiocity and interest in learning more about the highest summits on the seven continents.  
 The game has the added benefit of being able to change increase the difficulty levels and rate the performance of the player.
 
 <img src="assets/readme_images/mockup.png">
@@ -34,7 +34,7 @@ I have used two types of fonts:
 - 'Varela Round' with fallback on sans-serif.
 
 #### Imagery
-- The large, background hero image is designed to be striking and catch the user's attention. 
+- The large background image combined with parallax is designed to catch the user's attention.
 
     
 ### Wireframes
@@ -142,11 +142,11 @@ I have used two types of fonts:
 For testing my work in progress I was using Firefox and Google Chrome Developer Tools. The [W3C Markup Validator](https://validator.w3.org/#validate_by_input) and [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
 -   W3C Markup Validator: 
-    - [Home Page Results](https://github.com/Leoney/LPetkova-Portfolio/Memory-Game/assets/validation_results/index_page_html_validation.pdf)
-    - [Cards Game Page Results](https://github.com/Leoney/LPetkova-Portfolio/Memory-Game/assets/validation_results/cards_page_html_validation.pdf)
+    - [Home Page Results](https://github.com/Leoney/LPetkova-Portfolio/Memory-Game/assets/validation_results/index-page-html-validation.jpg)
+    - [Cards Game Page Results](https://github.com/Leoney/LPetkova-Portfolio/Memory-Game/assets/validationresults/cards-page-html-validation.jpg)
 -   W3C CSS Validator - 
-    - [Home Page Results](https://github.com/Leoney/LPetkova-Portfolio/Memory-Game/assets/validation_results/index_page_w3c_css_validator_results.pdf)
-    - [Cards Game Page Results](https://github.com/Leoney/LPetkova-Portfolio/Memory-Game/assets/validation_results/cards_page_w3c_css_validator_results.pdf)
+    - [Home Page Results](https://github.com/Leoney/LPetkova-Portfolio/Memory-Game/assets/validation_results/index-page-w3c-css-validator-results.jpg)
+    - [Cards Game Page Results](https://github.com/Leoney/LPetkova-Portfolio/Memory-Game/assets/validation_results/cards-page-w3c-css-validator-results.jpg)
 
 
 ### Further Testing
