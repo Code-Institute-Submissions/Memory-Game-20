@@ -2,55 +2,49 @@
 
 View the live project [here](https://leoney.github.io/Memory-Game/)
 
-This is a single player memory game with a theme - The Eight Summits - "collective name for eight highest mountains in the seven continents". This game also has the added benefit of being able to change increase the difficulty levels and rate the performance of the player.
+This is a single player memory match cards game with theme - The Eight Summits: "collective name for eight highest mountains in the seven continents". The intention is the game not only to help improve the player memory but trigger curiocity and interest in learning more about the highest summits on the seven continents.  
+The game has the added benefit of being able to change increase the difficulty levels and rate the performance of the player.
 
 <img src="assets/readme_images/mockup.png">
 
 ## User Experience (UX)
 
--   ### User stories
+### User stories
 
 As a First Time Visitor I want to: 
 
-1. play a game to improve brain functions, such as attention, concentration, and focus.
+- play a game to improve brain functions, such as attention, concentration, and focus.
 
-2. be able to easily navigate throughout the site to find content.
+- be able to easily navigate throughout the site to find content.
 
-3. have feedback on how well I am performing so as I can track any improvements in memory.
+- have feedback on how well I am performing so as I can track any improvements in memory.
 
-4. learn something new by the theme of the game.
+- learn something new by the theme of the game.
 
--   ### Design
+### Design
 
-    -   #### Colour Scheme
+#### Colour Scheme
 
-    - The two main colors I have used for the game design are dark blue and white.
+- The two main colors I have used for the game design are dark blue and white.
 
-    -   #### Typography
+#### Typography
 
-        - I have used two types of fonts: 
+I have used two types of fonts: 
+- 'Permanent Marker' with fallback on cursive font. 
+- 'Varela Round' with fallback on sans-serif.
 
-        - 'Permanent Marker' with fallback on cursive font. 
-        - 'Varela Round' with fallback on sans-serif.
-
-    -   #### Imagery
-
-        - The large, background hero image is designed to be striking and catch the user's attention. 
+#### Imagery
+- The large, background hero image is designed to be striking and catch the user's attention. 
 
     
--   ### Wireframes
+### Wireframes
 
-    - Home Page Wireframe [view](https://github.com/Leoney/Memory-Game/assets/wireframe/web_home_page.png)
-
-    - Rules Page Wireframe [view](https://github.com/Leoney/Memory-Game/assets/wireframe/web_rules_page.png)
-
-    - Cards Deck Page Wireframe [view](https://github.com/Leoney/Memory-Game/assets/wireframe/web_cards_page.png)
-
-    - Mobile Home Page Wireframe [view](https://github.com/Leoney/Memory-Game/assets/wireframe/mobile_home_page.png)
-
-    - Mobile Rules Page Wireframe [view](https://github.com/Leoney/Memory-Game/assets/wireframe/mobile_rules_page.png)
-
-    - Mobile Cards Deck Page Wireframe [view](https://github.com/Leoney/Memory-Game/assets/wireframe/mobile_cards_page.png)
+- Home Page Wireframe [view](https://github.com/Leoney/Memory-Game/assets/wireframe/web_home_page.png)
+- Rules Page Wireframe [view](https://github.com/Leoney/Memory-Game/assets/wireframe/web_rules_page.png)
+- Cards Deck Page Wireframe [view](https://github.com/Leoney/Memory-Game/assets/wireframe/web_cards_page.png)
+- Mobile Home Page Wireframe [view](https://github.com/Leoney/Memory-Game/assets/wireframe/mobile_home_page.png)
+- Mobile Rules Page Wireframe [view](https://github.com/Leoney/Memory-Game/assets/wireframe/mobile_rules_page.png)
+- Mobile Cards Deck Page Wireframe [view](https://github.com/Leoney/Memory-Game/assets/wireframe/mobile_cards_page.png)
 
 ## Features
 
