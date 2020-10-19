@@ -39,12 +39,12 @@ I have used two types of fonts:
     
 ### Wireframes
 
-- Home Page Wireframe [view](https://github.com/Leoney/Memory-Game/assets/wireframe/web_home_page.png)
-- Rules Page Wireframe [view](https://github.com/Leoney/Memory-Game/assets/wireframe/web_rules_page.png)
-- Cards Deck Page Wireframe [view](https://github.com/Leoney/Memory-Game/assets/wireframe/web_cards_page.png)
-- Mobile Home Page Wireframe [view](https://github.com/Leoney/Memory-Game/assets/wireframe/mobile_home_page.png)
-- Mobile Rules Page Wireframe [view](https://github.com/Leoney/Memory-Game/assets/wireframe/mobile_rules_page.png)
-- Mobile Cards Deck Page Wireframe [view](https://github.com/Leoney/Memory-Game/assets/wireframe/mobile_cards_page.png)
+- Home Page Wireframe [view](https://github.com/Leoney/Memory-Game/blob/main/assets/wireframe/web_home_page.png)
+- Rules Page Wireframe [view](https://github.com/Leoney/Memory-Game/blob/main/assets/wireframe/web_rules_page.png)
+- Cards Deck Page Wireframe [view](https://github.com/Leoney/Memory-Game/blob/main/assets/wireframe/web_cards_page.png)
+- Mobile Home Page Wireframe [view](https://github.com/Leoney/Memory-Game/blob/main/assets/wireframe/mobile_home_page.png)
+- Mobile Rules Page Wireframe [view](https://github.com/Leoney/Memory-Game/blob/main/assets/wireframe/mobile_rules_page.png)
+- Mobile Cards Deck Page Wireframe [view](https://github.com/Leoney/Memory-Game/blob/main/assets/wireframe/mobile_cards_page.png)
 
 ## Features
 
@@ -142,11 +142,11 @@ I have used two types of fonts:
 For testing my work in progress I was using Firefox and Google Chrome Developer Tools. The [W3C Markup Validator](https://validator.w3.org/#validate_by_input) and [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
 -   W3C Markup Validator: 
-    - [Home Page Results](https://github.com/Leoney/LPetkova-Portfolio/Memory-Game/assets/validation_results/index_page_html_validation.jpg)
-    - [Cards Game Page Results](https://github.com/Leoney/LPetkova-Portfolio/Memory-Game/assets/validationresults/cards_page_html_validation.jpg)
+    - [Home Page Results](https://github.com/Leoney/Memory-Game/blob/main/assets/validation_results/index_page_html_validation.jpg)
+    - [Cards Game Page Results](https://github.com/Leoney/Memory-Game/blob/main/assets/validation_results/cards_page_html_validation.jpg)
 -   W3C CSS Validator - 
-    - [Home Page Results](https://github.com/Leoney/LPetkova-Portfolio/Memory-Game/assets/validation_results/index_page_w3c_css_validator_results.jpg)
-    - [Cards Game Page Results](https://github.com/Leoney/LPetkova-Portfolio/Memory-Game/assets/validation_results/cards_page_w3c_css_validator_results.jpg)
+    - [Home Page Results](https://github.com/Leoney/Memory-Game/blob/main/assets/validation_results/index_page_w3c_css_validator_results.jpg)
+    - [Cards Game Page Results](https://github.com/Leoney/Memory-Game/blob/main/assets/validation_results/cards_page_w3c_css_validator_results.jpg)
 
 
 ### Further Testing
