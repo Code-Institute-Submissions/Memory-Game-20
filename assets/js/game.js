@@ -1,5 +1,5 @@
 /*
-This javascript is only for the cards game
+This javascript is only for the cards game page
 */
 
 // cards array holds all cards
@@ -25,7 +25,7 @@ let starsList = document.querySelectorAll(".stars li");
  // close icon in modal
 let closeicon = document.querySelector(".close");
 
- // declare modals
+// declare modals
 let firstOverlay = document.getElementById("popup-name");
 let modal = document.getElementById("popup-win");
 let timeoutModal = document.getElementById("popup-timeout");
@@ -124,9 +124,6 @@ function cardOpen() {
     openedCards.push(this);
     var len = openedCards.length;
 
-    //if(len < 2){
-        //console.log("Less than 2")
-    //}
     if(len === 2){
         moveCounter();
         if(openedCards[0].dataset.peak === openedCards[1].dataset.peak){
@@ -278,7 +275,7 @@ function congratulations(){
         if(countWin==3){
             document.getElementById("check-level").innerHTML = "again";
         }else{
-            document.getElementById("check-level").innerHTML = "next level";
+            document.getElementById("check-level").innerHTML = " next level";
         }
 
         //close icon on modal
